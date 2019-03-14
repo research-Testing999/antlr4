@@ -38,7 +38,7 @@ class ParseTreeVisitor(object):
         n = node.getChildCount()
         for i in range(n):
             if not self.shouldVisitNextChild(node, result):
-                return result
+                return
 
             c = node.getChild(i)
             childResult = c.accept(self)
